@@ -448,8 +448,10 @@ Three built-in Node.js modules are:
 
 **Example:** Creating a simple HTTP server that listens on port 3000 and responds with "Hello, World!"
 
-    ```js
+-   ```js
     const http = require("http"); //importing http module
+    ```
+
 
     //creating server
     const server = http.createServer((req, res) => {
@@ -468,8 +470,10 @@ Three built-in Node.js modules are:
 
 **Example**: Writing "Hello, World!" to a file named `example.txt` and then read the content of the file.
 
-    ```js
+-   ```js
     const fs = require("fs"); //importing fs module
+    ```
+
 
     // Write to file
     fs.writeFile("example.txt", "Hello, World!", (err) => {
@@ -488,8 +492,10 @@ Three built-in Node.js modules are:
 
 **Example:** Using the path module to join path segments, extract the file extension, and get the directory name from a file path.
 
-    ```js
+-   ```js
     const path = require("path"); //importing path module
+    ```
+
 
     // Join paths
     const filePath = path.join(__dirname, "example", "file.txt");
