@@ -14,7 +14,7 @@ The key features of Node.js include:
 The architecture of Node.js is based on the single-threaded event loop. The event loop continually monitors events and executes callbacks based on events.
 ![Node.js Architecture](./Images/nodejs%20architecture.png)
 
-**Parts of the Node.js Architecture:**
+#### Parts of the Node.js Architecture:
 
 -   **Requests:** Incoming requests can be blocking or non-blocking, depending upon the tasks that a user wants to perform in a web application
 -   **Node.js Server:** Node.js server is a server-side platform that takes requests from users, processes those requests, and returns responses to the corresponding users
@@ -44,7 +44,7 @@ To install Node.js, we should follow the following steps:
 
 ### 4. What is npm, and why is it important in the Node.js ecosystem? Explain how we would manage dependencies in a Node.js project using npm.
 
-npm is a package manager for JavaScript that comes bundled with Node.js.It allows us to install, update, and manage packages that we need for our projects.
+**npm** is a package manager for JavaScript that comes bundled with Node.js.It allows us to install, update, and manage packages that we need for our projects.
 
 It is npm Important in the Node.jsEcosystem because it helps us to install required packages which can help us in simplifying projects. It have the following benefits:
 
@@ -58,12 +58,19 @@ It is npm Important in the Node.jsEcosystem because it helps us to install requi
 
 Managing dependencies in a Node.jsproject using npm is a structured and straightforward process:
 
--   **Initialize project:** we need to initialize our Node.jsproject, which creates a "package.json" file that will keep track of our project's metadata and dependencies.
-    cmd-> npm
+-   **Initialize project:** we need to initialize our Node.js project, which creates a "package.json" file that will keep track of our project's metadata and dependencies.
+
+    ```cmd
+    npm init
+    ```
+
 -   **Install dependencis:**
-    cmd-> npm install --save-dev mocha
+    ```cmd
+    npm install --save-dev mocha
+    ```
 -   **Manage dependencies in "package.json":**
-    package.json->
+
+    ```js
     {
     "dependencies": {
     "express": "^4.17.1"
@@ -72,14 +79,15 @@ Managing dependencies in a Node.jsproject using npm is a structured and straight
     "mocha": "^8.3.0"
     }
     }
+    ```
 
-**Update dependencies:**
+-   **Update dependencies:**
 
     ```cmd
     npm update package-name
     ```
 
-**Remove dependencies:**
+-   **Remove dependencies:**
 
     ```cmd
     npm uninstall package-name
@@ -90,9 +98,10 @@ Managing dependencies in a Node.jsproject using npm is a structured and straight
 To write a simple Node.js application that outputs "Hello, World!" to the console, follow these steps:
 
 -   **Create a File:** Create a new file called "app.js" and add the following code:
-    app.js->
+    ```js
     console.log("Hello, World!");
--   **Run the App:** Open our terminal and navigate to the directory where "app.js" is located. Run the application with:
+    ```
+-   **Run the App:** Open terminal and navigate to the directory where "app.js" is located. Run the application with:
     ```cmd
     node app.js
     ```
@@ -103,7 +112,8 @@ To write a simple Node.js application that outputs "Hello, World!" to the consol
 Node.js modules are reusable blocks of code that can be included in Node.jsapplications. They help organize and encapsulate code, making it more modular and easier to maintain.
 
 -   To create a custom module, follow these steps:
-    **Create a Module:** Create a new file called "customModule.js" and add the following code:
+
+    -   **Create a Module:** Create a new file called "customModule.js" and add the following code:
 
     ```js
     module.exports = function () {
@@ -112,7 +122,9 @@ Node.js modules are reusable blocks of code that can be included in Node.jsappli
     ```
 
 -   To import it into another file, follow the following steps:
-    **Import the Module:** Create another file called "main.js" and add the following code:
+
+    -   **Import the Module:** Create another file called "main.js" and add the following code:
+
     ```js
     const myModule = require("./customModule");
     console.log(myModule());
@@ -120,23 +132,26 @@ Node.js modules are reusable blocks of code that can be included in Node.jsappli
 
 ### 7. Discuss the advantages and disadvantages of using Node.js for building server-side applications.
 
--   **Advantages:**
-    Asynchronous and Non-Blocking: Node.js performs very well at handling multiple concurrent connections without blocking the execution of the program. It is suited for I/O-bound applications.
+-   #### Advantages:
 
-    Single Programming Language: Developers can work with JavaScript in both client-side and server-side development, streamlining the whole process.
+    **Asynchronous and Non-Blocking**: Node.js performs very well at handling multiple concurrent connections without blocking the execution of the program. It is suited for I/O-bound applications.
 
-    Large Ecosystem: The Node.js package has a wide ecosystem of modules and packages accessible through npm.
+    **Single Programming Language**: Developers can work with JavaScript in both client-side and server-side development, streamlining the whole process.
 
--   **Disadvantages:**
-    Single-Threaded Limitations: Though the single-threaded nature of Node.js makes it efficient for I/O-bound operations, it poses a limitation to CPU-bound operations.
+    **Large Ecosystem**: The Node.js package has a wide ecosystem of modules and packages accessible through npm.
 
-    Callback Hell: A lot of callback usage leads to complex and very hard-to-maintain code.
+-   #### Disadvantages:
+
+    **Single-Threaded Limitations**: Though the single-threaded nature of Node.js makes it efficient for I/O-bound operations, it poses a limitation to CPU-bound operations.
+
+    **Callback Hell**: A lot of callback usage leads to complex and very hard-to-maintain code.
 
 ### 8. Explain the role of the Node.js REPL and how it can be used for quick testing and debugging.
 
-The Node.jsREPL (Read-Eval-Print Loop) is an interactive shell that allows developers to execute JavaScript code in a real-time environment. It provides a quick and convenient way to test and debug code snippets, experiment with new features, and perform ad-hoc operations. Here's an overview of its role and usage:
+**The Node.js REPL** (Read-Eval-Print Loop) is an interactive shell that allows developers to execute JavaScript code in a real-time environment. It provides a quick and convenient way to test and debug code snippets, experiment with new features, and perform ad-hoc operations. Here's an overview of its role and usage:
 
--   **Role of the Node.jsREPL:**
+-   #### Role of the Node.jsREPL:
+
     **Interactive Programming:** The REPL provides an interactive environment where we can write and execute JavaScript code line by line. This is particularly useful for trying out small code snippets and getting immediate feedback.
 
     **Quick Testing:** we can quickly test functions, expressions, and logic without creating a full-fledged script or project. This makes it an excellent tool for rapid prototyping and experimentation.
@@ -148,7 +163,7 @@ The Node.jsREPL (Read-Eval-Print Loop) is an interactive shell that allows devel
 -   **Using the Node.jsREPL:**
     To start the Node.jsREPL, simply open our terminal or command prompt and type node. This will launch the REPL interface, indicated by the > prompt.
 
-    **Example Usage:** Here are some examples of how we can use the Node.jsREPL:
+    #### Example Usage:
 
     **Basic Arithmetic:**
 
@@ -187,7 +202,7 @@ The Node.jsREPL (Read-Eval-Print Loop) is an interactive shell that allows devel
 
 The CommonJS module system is the default module system used in Node.js. It defines a simple way to create reusable modules and load them into our Node.js applications.
 
-**CommonJS Module System:**
+#### CommonJS Module System:
 
 1. **Module Structure**: In CommonJS, each file is treated as a separate module. we can define the functionality of a module using the `module.exports` object, which is then accessible to other files that require this module.
 
@@ -212,7 +227,7 @@ The CommonJS module system is the default module system used in Node.js. It defi
 
 4. **Caching**: Once a module is loaded, it is cached by Node.js. Subsequent `require` calls for the same module return the cached version, enhancing performance.
 
-**ES6 Modules:**
+#### ES6 Modules:
 
 ES6 introduced a standardized module system that differs from CommonJS in several ways:
 
@@ -242,7 +257,7 @@ ES6 introduced a standardized module system that differs from CommonJS in severa
 
 4. **Static Analysis**: The `import` and `export` statements are statically analyzable, meaning the structure of the modules can be determined at compile-time. This helps tools like bundlers and minifiers optimize the code.
 
-**Key Differences:**
+#### Key Differences:
 
 1. **Syntax**:
 
@@ -267,7 +282,7 @@ ES6 introduced a standardized module system that differs from CommonJS in severa
 
 **Scenario**: Developing a real-time collaborative editing tool where multiple users can edit documents simultaneously.
 
-**Advantages of Node.js:**
+#### Advantages of Node.js:
 
 1. **High Concurrency**:
 
@@ -319,7 +334,7 @@ CommonJS is the module system used by Node.js. It allows us to modularize our co
     console.log(math.subtract(5, 3)); // Outputs: 2
     ```
 
-**ES6 Module System**
+#### ES6 Module System
 
 ES6 introduced a standardized module system that differs from CommonJS. It uses `import` and `export` statements and is more flexible for both client and server environments.
 
@@ -341,7 +356,7 @@ ES6 introduced a standardized module system that differs from CommonJS. It uses 
     console.log(subtract(5, 3)); // Outputs: 2
     ```
 
-**Key Differences:**
+#### Key Differences:
 
 1. **Syntax**:
 
@@ -361,7 +376,7 @@ ES6 introduced a standardized module system that differs from CommonJS. It uses 
 4. **Interoperability**:
     - In Node.js, both module systems can be used, but we might need additional tools or configurations to handle ES6 modules in older versions of Node.js.
 
-**Example Comparison:**
+#### Example Comparison:
 
 **CommonJS Module**:
 
@@ -416,8 +431,6 @@ ES6 introduced a standardized module system that differs from CommonJS. It uses 
         ```bash
         node app.js
         ```
-
-    111
 
 ### 13. List and describe three built-in Node.js modules. Provide examples of how each module can be used in a Node.js application.
 
@@ -850,8 +863,8 @@ Updating npm packages in a Node.js project ensures benefit from the latest featu
 
 4. **Check for Outdated Packages**: Use `npm outdated` to check for outdated packages. This command lists the current version, the latest version, and the version specified in your `package.json`.
    `bash
-    npm outdated
-    `
+npm outdated
+`
 
 5. **Manually Update Version**:
     - Edit the `package.json` file to specify the desired version of the package and then run `npm install`.
@@ -862,15 +875,15 @@ Uninstalling npm packages that are no longer needed can help keep the project cl
 
 1. **Uninstall Specific Package**: To uninstall a specific package, use the following command:
    `bash
-    npm uninstall package-name
-    `
+npm uninstall package-name
+`
 
 2. **Uninstall and Update `package.json`**: The above command will also update the `package.json` file to remove the package from the dependencies.
 
 3. **Uninstall Dev Dependency**: If the package is a development dependency, use:
    `bash
-    npm uninstall package-name --save-dev
-    `
+npm uninstall package-name --save-dev
+`
 
 ### Cautions When Updating Packages
 
