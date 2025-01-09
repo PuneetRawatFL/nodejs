@@ -5,15 +5,20 @@
 Solution->
 Node.js is a powerful runtime environment that allows developers to run JavaScript on the server side. It was built on Chrome's V8 JavaScript engine and is known for its high performance and efficiency.
 The key features of Node.js include:
-
--   Event-Driven Architecture: Node.js uses an event-driven, non-blocking I/O model, which allows it to handle multiple connections simultaneously without blocking the execution. This makes it highly efficient and suitable for I/O-bound applications.
--   Non-Blocking I/O: The traditional server-side models use blocking I/O, in which the execution has to wait for an I/O operation to complete its tasks before moving on. However, Node.js uses non-blocking I/O, meaning that it can perform other tasks while waiting for I/O operations.
--   Single-Threaded: Node.js is based on a single-threaded event loop. This makes it possible to handle many concurrent connections with ease. This is quite different from the traditional multi-threaded server-side models.
+- Event-Driven Architecture: Node.js uses an event-driven, non-blocking I/O model, which allows it to handle multiple connections simultaneously without blocking the           execution. This makes it highly efficient and suitable for I/O-bound applications.
+- Non-Blocking I/O: The traditional server-side models use blocking I/O in which the execution has to wait for an I/O operation to complete its tasks before moving on. While   Node.js uses non-blocking I/O, meaning that it can perform other tasks while waiting for I/O operations.
+- Single-Threaded: Node.js is based on a single-threaded event loop. This makes it possible to handle many concurrent connections. This is quite different from the             traditional multi-threaded server-side models.
 
 2. Describe the architecture of Node.js. How does the single-threaded event loop handle multiple concurrent requests efficiently?
 
 Solution->
-The architecture of Node.js is based on the single-threaded event loop. The event loop continually monitors events and executes callbacks based on events. It handles multiple concurrent requests as follows: - Event Loop: The event loop is a loop that runs continuously scanning for newly incoming events, and executes their corresponding callbacks. This mechanism ensures that the application responds correctly, with minimum response time, and allows for simultaneous handling of several requests. - Event Queue: When a request is made it is added to the event queue. The event loop then works to processes each event, execute the corresponding callback. - I/O Offloading: Node.js offloads I/O operations to the operating system, so that the event loop can continue to process other events. This means Node.js can serve a large number of concurrent connections efficiently.
+The architecture of Node.js is based on the single-threaded event loop. The event loop continually monitors events and executes callbacks based on events. 
+![Node.js Architecture](./pictures/screenshots/nodejs_architecture.png)
+
+It handles multiple concurrent requests as follows: 
+- Event Loop: The event loop is a loop that runs continuously scanning for newly incoming events, and executes their corresponding callbacks. This mechanism ensures that the   application responds correctly, with minimum response time, and allows for simultaneous handling of several requests. 
+- Event Queue: When a request is made it is added to the event queue. The event loop then works to processes each event, execute the corresponding callback.
+- I/O Offloading: Node.js offloads I/O operations to the operating system, so that the event loop can continue to process other events. This means Node.js can serve a large number of concurrent connections efficiently.
 
 3. Outline the steps to install Node.js on your machine. How can you verify that Node.js is correctly installed and working?
 
