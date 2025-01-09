@@ -45,7 +45,7 @@ To install Node.js, we should follow the following steps:
     -   npm -v or npm --version
         This will display the installed versions of Node.js and npm.
 
-4. What is npm, and why is it important in the Node.js ecosystem? Explain how you would manage dependencies in a Node.js project using npm.
+### 4. What is npm, and why is it important in the Node.js ecosystem? Explain how you would manage dependencies in a Node.js project using npm.
 
 **Solution->**
 npm is a package manager for JavaScript that comes bundled with Node.js.It allows us to install, update, and manage packages that we need for our projects.
@@ -61,26 +61,33 @@ It is npm Important in the Node.jsEcosystem because it helps us to install requi
 -   **Consistency:** By using package.json, npm ensures that projects are consistent and reproducible across different environments and team members.
 
 Managing dependencies in a Node.jsproject using npm is a structured and straightforward process:
-**Initialize project:** we need to initialize your Node.jsproject, which creates a "package.json" file that will keep track of your project's metadata and dependencies.
-cmd-> npm
-**Install dependencis:**
-cmd-> npm install --save-dev mocha
-**Manage dependencies in "package.json":**
-package.json->
-{
-"dependencies": {
-"express": "^4.17.1"
-},
-"devDependencies": {
-"mocha": "^8.3.0"
-}
-}
+
+-   **Initialize project:** we need to initialize your Node.jsproject, which creates a "package.json" file that will keep track of your project's metadata and dependencies.
+    cmd-> npm
+-   **Install dependencis:**
+    cmd-> npm install --save-dev mocha
+-   **Manage dependencies in "package.json":**
+    package.json->
+    {
+    "dependencies": {
+    "express": "^4.17.1"
+    },
+    "devDependencies": {
+    "mocha": "^8.3.0"
+    }
+    }
 
 **Update dependencies:**
-cmd->npm update package-name
+
+    ```cmd
+    npm update package-name
+    ```
 
 **Remove dependencies:**
-cmd->npm uninstall package-name
+
+    ```cmd
+    npm uninstall package-name
+    ```
 
 ### 5. Write a simple Node.js application that outputs "Hello, World!" to the console. Explain the steps to run this application using the Node.js runtime.
 
@@ -91,7 +98,9 @@ To write a simple Node.js application that outputs "Hello, World!" to the consol
     app.js->
     console.log("Hello, World!");
 -   **Run the App:** Open your terminal and navigate to the directory where "app.js" is located. Run the application with:
-    cmd-> node app.js
+    ```cmd
+    node app.js
+    ```
     This will output "Hello, World!" to the console.
 
 ### 6. What are Node.js modules? Describe how to create a custom module in Node.js and how to import it into another file.
@@ -101,16 +110,19 @@ Node.js modules are reusable blocks of code that can be included in Node.jsappli
 
 -   To create a custom module, follow these steps:
     **Create a Module:** Create a new file called "customModule.js" and add the following code:
-    customModule.js->
-    module.exports = function() {
-    return 'Hello from the module!';
+
+    ```js
+    module.exports = function () {
+        return "Hello from the module!";
     };
+    ```
 
 -   To import it into another file, follow the following steps:
     **Import the Module:** Create another file called "main.js" and add the following code:
-    main.js->
-    const myModule = require('./customModule');
+    ```js
+    const myModule = require("./customModule");
     console.log(myModule());
+    ```
 
 ### 7. Discuss the advantages and disadvantages of using Node.js for building server-side applications.
 
@@ -133,7 +145,7 @@ Node.js modules are reusable blocks of code that can be included in Node.jsappli
 **Solution->**
 The Node.jsREPL (Read-Eval-Print Loop) is an interactive shell that allows developers to execute JavaScript code in a real-time environment. It provides a quick and convenient way to test and debug code snippets, experiment with new features, and perform ad-hoc operations. Here's an overview of its role and usage:
 
--   Role of the Node.jsREPL:
+-   **Role of the Node.jsREPL:**
     **Interactive Programming:** The REPL provides an interactive environment where you can write and execute JavaScript code line by line. This is particularly useful for trying out small code snippets and getting immediate feedback.
 
     **Quick Testing:** You can quickly test functions, expressions, and logic without creating a full-fledged script or project. This makes it an excellent tool for rapid prototyping and experimentation.
@@ -263,7 +275,7 @@ ES6 (ECMAScript 2015) introduced a standardized module system that differs from 
 
 ### 10. Describe a real-world scenario where Node.js would be more advantageous to use compared to traditional server-side technologies.
 
-Solution->
+**Solution->**
 
 **Scenario**: Developing a real-time collaborative editing tool where multiple users can edit documents simultaneously.
 
