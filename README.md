@@ -382,7 +382,7 @@ ES6 introduced a standardized module system that differs from CommonJS. It uses 
 
 #### Example Comparison:
 
-**CommonJS Module**:
+1. **CommonJS Module**:
 
     ```js
     // greeting.js
@@ -395,7 +395,7 @@ ES6 introduced a standardized module system that differs from CommonJS. It uses 
     console.log(greet("World")); // Outputs: Hello, World!
     ```
 
-**ES6 Module**:
+2. **ES6 Module**:
 
     ```js
     // greeting.js
