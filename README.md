@@ -152,7 +152,7 @@ Node.js modules are reusable blocks of code that can be included in Node.js appl
 
 ### 8. Explain the role of the Node.js REPL and how it can be used for quick testing and debugging.
 
-**The Node.js REPL** (Read-Eval-Print Loop) is an interactive shell that allows developers to execute JavaScript code in a real-time environment. It provides a quick and convenient way to test and debug code snippets, experiment with new features, and perform ad-hoc operations. Here's an overview of its role and usage:
+**The Node.js REPL** (Read-Eval-Print Loop) is an interactive shell that allows developers to execute JavaScript code in a real-time environment. It provides a quick and convenient way to test and debug code snippets.
 
 #### Role of the Node.jsREPL:
 
@@ -162,10 +162,10 @@ Node.js modules are reusable blocks of code that can be included in Node.js appl
 
 -   **Debugging:** The REPL can be used to debug code by isolating specific parts and testing them in isolation. we can inspect variables, run functions, and evaluate expressions to understand how our code behaves.
 
--   **Learning Tool:** For beginners, the REPL is a great learning tool. It allows we to practice JavaScript and see the results of our code in real time, helping to reinforce concepts and improve our understanding.
+-   **Learning Tool:** The REPL is a great learning tool. It allows we to practice JavaScript and see the results of our code in real time, helping to reinforce concepts and improve our understanding.
 
 -   **Using the Node.jsREPL:**
-    To start the Node.jsREPL, simply open our terminal or command prompt and type node. This will launch the REPL interface, indicated by the > prompt.
+    To start the Node.jsREPL, simply open terminal or command prompt and type node. This will launch the REPL interface, indicated by the > prompt.
 
     #### Example Usage:
 
@@ -204,7 +204,7 @@ Node.js modules are reusable blocks of code that can be included in Node.js appl
 
 ### 9. Provide a detailed explanation of the CommonJS module system in Node.js. How does it differ from ES6 modules?
 
-The CommonJS module system is the default module system used in Node.js. It defines a simple way to create reusable modules and load them into our Node.js applications.
+The CommonJS module system is the default module system used in Node.js. It defines a simple way to create reusable modules and load them into Node.js applications.
 
 #### CommonJS Module System:
 
@@ -247,7 +247,7 @@ ES6 introduced a standardized module system that differs from CommonJS in severa
     }
     ```
 
-2. **Importing Modules**: Use the `import` statement to bring in exported functionalities from other modules.
+2. **Importing Modules**: Use the `import` statement to import other modules.
 
     ```js
     // app.js
@@ -276,11 +276,11 @@ ES6 introduced a standardized module system that differs from CommonJS in severa
 3. **Usage Context**:
 
     - CommonJS is predominantly used in Node.js.
-    - ES6 modules are standardized and can be used in both browser and server environments (modern browsers and Node.js support them).
+    - ES6 modules are standardized and can be used in both browser and server environments.
 
 4. **Interoperability**:
 
-    - In Node.js, we can use both module systems, but we might need to use tools like Babel or specific configurations to handle ES6 modules in older versions of Node.js.
+    - In Node.js, we can use both module systems, but we might need additional tools or configurations to handle ES6 modules in older versions of Node.js.
 
 ### 10. Describe a real-world scenario where Node.js would be more advantageous to use compared to traditional server-side technologies.
 
@@ -506,7 +506,7 @@ Three built-in Node.js modules are:
 
 ### 14. What is npm, and why is it important in the Node.js ecosystem? Explain how to install and manage packages using npm.
 
-**npm**(Node Package Manager) is a critical tool in the Node.js ecosystem that facilitates the installation, updating, and management of packages and dependencies. Here’s why npm is important and how to use it:
+**npm**(Node Package Manager) is a critical tool in the Node.js ecosystem that facilitates the installation, updating, and management of packages and dependencies.
 
 **Importance of npm in the Node.js Ecosystem:**
 
@@ -524,25 +524,25 @@ Three built-in Node.js modules are:
 
 **1. Initialize a Project:** We need a `package.json` file to keep track of our project’s metadata and dependencies. Initialize it using:
 
-```bash
+```cmd
 npm init
 ```
 
 **2. Install Packages:** To add a package(eg, express) to our project, use the `npm install` command:
 
-```bash
+```cmd
 npm install express
 ```
 
 **3. Update Packages:** To update all installed packages to their latest versions, run:
 
-```bash
+```cmd
 npm update
 ```
 
 **4. Remove Packages:** To remove a package we no longer need:
 
-```bash
+```cmd
 npm uninstall package-name
 ```
 
@@ -637,7 +637,7 @@ Its purpose and the key information it contains:
 
 **Command**:
 
-```bash
+```cmd
 npm install -g package-name
 ```
 
@@ -657,7 +657,7 @@ npm install -g package-name
 
 **Command**:
 
-```bash
+```cmd
 npm install package-name
 ```
 
@@ -692,7 +692,7 @@ Use global installation for system-wide tools and CLI utilities, and local insta
 **Step 1: Search for the Module:** Visit [npmjs.com](https://www.npmjs.com/) and use the search bar and search for "express" to find the Express package.
 
 **Step 2: Install the Module:** Open terminal and navigate to project directory. Use the `npm install` command to install the module.
-`bash
+`cmd
     npm install express
     `
 
@@ -704,13 +704,13 @@ This will install Express and add it to the `dependencies` section `package.json
 
 1. **Create a New Project**: Create a new project and initialize npm.
 
-    ```bash
+    ```cmd
     npm init -y
     ```
 
 2. **Install Express**:
 
-    ```bash
+    ```cmd
     npm install express
     ```
 
@@ -737,7 +737,7 @@ This will install Express and add it to the `dependencies` section `package.json
 
     - Start the server by running the `app.js` file using Node.js:
 
-    ```bash
+    ```cmd
     node app.js
     ```
 
@@ -750,7 +750,7 @@ This will install Express and add it to the `dependencies` section `package.json
 
 1. **Create and Prepare Project:** Ensure the project has a `package.json` file. If not, create one by running:
 
-    ```bash
+    ```cmd
     npm init
     ```
 
@@ -761,7 +761,7 @@ This will install Express and add it to the `dependencies` section `package.json
 4. **Login to npm:** If we don't already have an npm account, create one at [npmjs.com](https://www.npmjs.com/).
 
     - Login to npm account from the command line:
-        ```bash
+        ```cmd
         npm login
         ```
     - Enter username, password, and email when prompted.
@@ -769,7 +769,7 @@ This will install Express and add it to the `dependencies` section `package.json
 5. **Publish Package**:
 
     - Once logged in, publish the package to the npm registry using:
-        ```bash
+        ```cmd
         npm publish
         ```
     - Ensure that the package name is unique. If another package with the same name already exists, we need to choose a different name.
@@ -852,21 +852,21 @@ This will install Express and add it to the `dependencies` section `package.json
 Updating npm packages in a Node.js project ensures benefit from the latest features, bug fixes, and security patches.
 
 1. **Update Specific Package**: To update a specific package to the latest version, use the following command:
-    ```bash
+    ```cmd
     npm update package-name
     ```
 2. **Update All Packages**: To update all packages in project, use:
-    ```bash
+    ```cmd
     npm update
     ```
 3. **Update Packages to the Latest Version**: To update packages to the latest version specified in `package.json`, use:
 
-    ```bash
+    ```cmd
     npm install
     ```
 
 4. **Check for Outdated Packages**: Use `npm outdated` to check for outdated packages. This command lists the current version, the latest version, and the version specified in `package.json`.
-   `bash
+   `cmd
 npm outdated
 `
 
@@ -878,14 +878,14 @@ npm outdated
 Uninstalling npm packages that are no longer needed can help keep the project clean and reduce potential security risks:
 
 1. **Uninstall Specific Package**: To uninstall a specific package, use the following command:
-   `bash
+   `cmd
 npm uninstall package-name
 `
 
 2. **Uninstall and Update `package.json`**: The above command will also update the `package.json` file to remove the package from the dependencies.
 
 3. **Uninstall Dev Dependency**: If the package is a development dependency, use:
-   `bash
+   `cmd
 npm uninstall package-name --save-dev
 `
 
