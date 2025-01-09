@@ -58,7 +58,7 @@ It is npm Important in the Node.jsEcosystem because it helps us to install requi
 
 Managing dependencies in a Node.jsproject using npm is a structured and straightforward process:
 
--   **Initialize project:** we need to initialize our Node.js project, which creates a "package.json" file that will keep track of our project's metadata and dependencies.
+-   **Initialize project:** we need to initialize our Node.js project, which creates a `package.json` file that will keep track of our project's metadata and dependencies.
 
     ```cmd
     npm init
@@ -71,6 +71,7 @@ Managing dependencies in a Node.jsproject using npm is a structured and straight
 -   **Manage dependencies in "package.json":**
 
     ```js
+    //package.json
     {
     "dependencies": {
     "express": "^4.17.1"
@@ -97,11 +98,12 @@ Managing dependencies in a Node.jsproject using npm is a structured and straight
 
 To write a simple Node.js application that outputs "Hello, World!" to the console, follow these steps:
 
--   **Create a File:** Create a new file called "app.js" and add the following code:
+-   **Create a File:** Create a new file called `app.js` and add the following code:
     ```js
+    //app.js
     console.log("Hello, World!");
     ```
--   **Run the App:** Open terminal and navigate to the directory where "app.js" is located. Run the application with:
+-   **Run the App:** Open terminal and navigate to the directory where `app.js` is located. Run the application with:
     ```cmd
     node app.js
     ```
@@ -109,13 +111,14 @@ To write a simple Node.js application that outputs "Hello, World!" to the consol
 
 ### 6. What are Node.js modules? Describe how to create a custom module in Node.js and how to import it into another file.
 
-Node.js modules are reusable blocks of code that can be included in Node.jsapplications. They help organize and encapsulate code, making it more modular and easier to maintain.
+Node.js modules are reusable blocks of code that can be included in Node.js applications. They help organize and encapsulate code, making it more modular and easier to maintain.
 
 -   To create a custom module, follow these steps:
 
-    -   **Create a Module:** Create a new file called "customModule.js" and add the following code:
+    -   **Create a Module:** Create a new file called `customModule.js` and add the following code:
 
     ```js
+    //customModule.js
     module.exports = function () {
         return "Hello from the module!";
     };
@@ -126,52 +129,53 @@ Node.js modules are reusable blocks of code that can be included in Node.jsappli
     -   **Import the Module:** Create another file called "main.js" and add the following code:
 
     ```js
+    //main.js
     const myModule = require("./customModule");
     console.log(myModule());
     ```
 
 ### 7. Discuss the advantages and disadvantages of using Node.js for building server-side applications.
 
--   #### Advantages:
+#### Advantages:
 
-    **Asynchronous and Non-Blocking**: Node.js performs very well at handling multiple concurrent connections without blocking the execution of the program. It is suited for I/O-bound applications.
+-   **Asynchronous and Non-Blocking**: Node.js performs very well at handling multiple concurrent connections without blocking the execution of the program. It is suited for I/O-bound applications.
 
-    **Single Programming Language**: Developers can work with JavaScript in both client-side and server-side development, streamlining the whole process.
+-   **Single Programming Language**: Developers can work with JavaScript in both client-side and server-side development, streamlining the whole process.
 
-    **Large Ecosystem**: The Node.js package has a wide ecosystem of modules and packages accessible through npm.
+-   **Large Ecosystem**: The Node.js package has a wide ecosystem of modules and packages accessible through npm.
 
--   #### Disadvantages:
+#### Disadvantages:
 
-    **Single-Threaded Limitations**: Though the single-threaded nature of Node.js makes it efficient for I/O-bound operations, it poses a limitation to CPU-bound operations.
+-   **Single-Threaded Limitations**: Though the single-threaded nature of Node.js makes it efficient for I/O-bound operations, it poses a limitation to CPU-bound operations.
 
-    **Callback Hell**: A lot of callback usage leads to complex and very hard-to-maintain code.
+-   **Callback Hell**: A lot of callback usage leads to complex and very hard-to-maintain code.
 
 ### 8. Explain the role of the Node.js REPL and how it can be used for quick testing and debugging.
 
 **The Node.js REPL** (Read-Eval-Print Loop) is an interactive shell that allows developers to execute JavaScript code in a real-time environment. It provides a quick and convenient way to test and debug code snippets, experiment with new features, and perform ad-hoc operations. Here's an overview of its role and usage:
 
--   #### Role of the Node.jsREPL:
+#### Role of the Node.jsREPL:
 
-    **Interactive Programming:** The REPL provides an interactive environment where we can write and execute JavaScript code line by line. This is particularly useful for trying out small code snippets and getting immediate feedback.
+-   **Interactive Programming:** The REPL provides an interactive environment where we can write and execute JavaScript code line by line. This is particularly useful for trying out small code snippets and getting immediate feedback.
 
-    **Quick Testing:** we can quickly test functions, expressions, and logic without creating a full-fledged script or project. This makes it an excellent tool for rapid prototyping and experimentation.
+-   **Quick Testing:** we can quickly test functions, expressions, and logic without creating a full-fledged script or project. This makes it an excellent tool for rapid prototyping and experimentation.
 
-    **Debugging:** The REPL can be used to debug code by isolating specific parts and testing them in isolation. we can inspect variables, run functions, and evaluate expressions to understand how our code behaves.
+-   **Debugging:** The REPL can be used to debug code by isolating specific parts and testing them in isolation. we can inspect variables, run functions, and evaluate expressions to understand how our code behaves.
 
-    **Learning Tool:** For beginners, the REPL is a great learning tool. It allows we to practice JavaScript and see the results of our code in real time, helping to reinforce concepts and improve our understanding.
+-   **Learning Tool:** For beginners, the REPL is a great learning tool. It allows we to practice JavaScript and see the results of our code in real time, helping to reinforce concepts and improve our understanding.
 
 -   **Using the Node.jsREPL:**
     To start the Node.jsREPL, simply open our terminal or command prompt and type node. This will launch the REPL interface, indicated by the > prompt.
 
     #### Example Usage:
 
-    **Basic Arithmetic:**
+    -   **Basic Arithmetic:**
 
         > 2 + 2
 
     > 4
 
-    **Variable Declaration and Functions:**
+    -   **Variable Declaration and Functions:**
 
     > let x = 10;
     > x \* 2
@@ -184,13 +188,13 @@ Node.js modules are reusable blocks of code that can be included in Node.jsappli
     > greet('Alice')
     > 'Hello, Alice!'
 
-    **Inspecting Objects:**
+    -   **Inspecting Objects:**
 
     > const obj = { a: 1, b: 2 };
     > console.log(obj);
     > { a: 1, b: 2 }
 
-    **Multi-line Input:** The REPL supports multi-line input. we can use the ellipsis ... to continue input on the next line.
+    -   **Multi-line Input:** The REPL supports multi-line input. we can use the ellipsis ... to continue input on the next line.
 
     > let sum = (a, b) => {
     > ... return a + b;
@@ -381,14 +385,14 @@ ES6 introduced a standardized module system that differs from CommonJS. It uses 
 **CommonJS Module**:
 
     ```js
-        // greeting.js
-        module.exports = function (name) {
-            return `Hello, ${name}!`;
-        };
+    // greeting.js
+    module.exports = function (name) {
+        return `Hello, ${name}!`;
+    };
 
-        // app.js
-        const greet = require("./greeting");
-        console.log(greet("World")); // Outputs: Hello, World!
+    // app.js
+    const greet = require("./greeting");
+    console.log(greet("World")); // Outputs: Hello, World!
     ```
 
 **ES6 Module**:
@@ -428,9 +432,9 @@ ES6 introduced a standardized module system that differs from CommonJS. It uses 
 
 3.  **Run `app.js`** using Node.js:
 
-        ```bash
-        node app.js
-        ```
+    ```cmd
+    node app.js
+    ```
 
 ### 13. List and describe three built-in Node.js modules. Provide examples of how each module can be used in a Node.js application.
 
