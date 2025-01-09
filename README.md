@@ -452,18 +452,20 @@ Three built-in Node.js modules are:
     const http = require("http"); //importing http module
     ```
 
-
     //creating server
     const server = http.createServer((req, res) => {
-        res.statusCode = 200;
-        res.setHeader("Content-Type", "text/plain");
-        res.end("Hello, World!\n");
+    res.statusCode = 200;
+    res.setHeader("Content-Type", "text/plain");
+    res.end("Hello, World!\n");
     });
 
     //starting server
     server.listen(3000, "127.0.0.1", () => {
-        console.log("Server running at http://127.0.0.1:3000/");
+    console.log("Server running at http://127.0.0.1:3000/");
     });
+
+    ```
+
     ```
 
 **2. `fs` Module:** The `fs` (file system) module provides an API for interacting with the file system. It can read, write, delete, and manipulate files and directories.
@@ -474,18 +476,21 @@ Three built-in Node.js modules are:
     const fs = require("fs"); //importing fs module
     ```
 
-
     // Write to file
     fs.writeFile("example.txt", "Hello, World!", (err) => {
-        if (err) throw err;
-        console.log("File has been saved!");
+    if (err) throw err;
+    console.log("File has been saved!");
 
         // Read the file
         fs.readFile("example.txt", "utf8", (err, data) => {
             if (err) throw err;
             console.log(data); // Outputs: Hello, World!
         });
+
     });
+
+    ```
+
     ```
 
 **3. `path` Module:** The `path` module provides utilities for working with file and directory paths. It helps in handling and transforming paths across different operating systems.
@@ -494,8 +499,6 @@ Three built-in Node.js modules are:
 
 -   ```js
     const path = require("path"); //importing path module
-    ```
-
 
     // Join paths
     const filePath = path.join(__dirname, "example", "file.txt");
