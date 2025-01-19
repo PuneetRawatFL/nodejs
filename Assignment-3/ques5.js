@@ -56,7 +56,6 @@ app.post("/books", async (req, res) => {
 //finding book using id
 app.get("/books/:id", async (req, res) => {
     try {
-        console.log(req.params.id);
         const deleteBook = await Book.findOne({ bookId: req.params.id });
         if (!deleteBook) {
             res.statusCode = 404;
@@ -71,7 +70,6 @@ app.get("/books/:id", async (req, res) => {
 //updating book using id
 app.put("/books/:id", async (req, res) => {
     try {
-        console.log(req.params.id);
         const updateBook = await Book.findOneAndUpdate(
             { bookId: req.params.id },
             req.body
@@ -89,7 +87,6 @@ app.put("/books/:id", async (req, res) => {
 //deleting a book using id
 app.delete("/books/:id", async (req, res) => {
     try {
-        console.log(req.params.id);
         const book = await Book.findOneAndDelete({ bookId: req.params.id });
         if (!book) {
             res.statusCode = 404;
